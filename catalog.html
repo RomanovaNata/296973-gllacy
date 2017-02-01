@@ -10,7 +10,7 @@
 		<div class="header-logo">
 			<a href=""><img src="#" width="154" height="64" alt="Глейси"></a>
 		</div>
-		<div class="header-navigation">
+		<nav class="header-navigation">
 			<ul>
 				<li>
 					<a class="header-navigation-item activ" href="#">Каталог</a>
@@ -29,7 +29,7 @@
 					<a class="header-navigation-item" href="">О компании</a>
 				</li>
 			</ul>
-		</div>
+		</nav>
 		<div class="header-search">
 			<div class="header-search-hide"><!--Окно поиска при наведении курсора-->
 				<form action="#" method="post">
@@ -53,33 +53,24 @@
 				</form>
 			</div>
 		</div>
-		<div class="user-basket"> 
+		<div class="user-basket">
 			<a class="basket" href="#">2 товара</a>
-			<div class="user-basket-hide"> <!--Корзина с товарами при наведении курсора-->
-				<div class="user-basket-result">
-					<div class="user-basket-summary">
-						<ul>
-							<li class="user-basket-summary-1"></li>
-							<li class="user-basket-summary-2"></li>
-							<li class="user-basket-summary-3">Пломбир с апельсиновым джемом</li>
-							<li class="user-basket-summary-4">1,5 кг x</li>
-							<li class="user-basket-summary-5">200 руб.</li>
-							<li class="user-basket-summary-6">300 руб.</li>
-						</ul>
-						<ul>
-							<li class="user-basket-summary-7"></li>
-							<li class="user-basket-summary-8"></li>
-							<li class="user-basket-summary-9">Клубничный пломбир с присыакой из белого шоколада</li>
-							<li class="user-basket-summary-10">1,5 кг x</li>
-							<li class="user-basket-summary-11">300 руб.</li>
-							<li class="user-basket-summary-12">450 руб.</li>
-						</ul>
-					</div>
-					<p class="user-basket-price">Итого: 750 руб.</p>
-					<button class="gllacy-btn user-basket-btn" type="button">Оформить заказ</button>
-				</div>
-			</div>
-		</div>
+			<table class="user-basket-hide"> <!--Корзина с товарами при наведении курсора-->
+<tr>
+	<td class="user-basket-name">Пломбир с апельсиновым джемом</td>
+	<td class="user-basket-weight">1,5 кг x</td>
+	<td class="user-basket-price">200 руб.</td>
+	<td class="user-basket-result">300 руб.</td>
+</tr>
+<tr>
+	<td class="user-basket-name">Клубничный пломбир с присыпкой из белого шоколада</td>
+	<td class="user-basket-weight">1,5 кг x</td>
+	<td class="user-basket-price">300 руб.</td>
+	<td class="user-basket-result">450 руб.</td>
+</tr>
+				</table>
+				<span class="user-basket-price">Итого: 750 руб.</span>
+				<a class="gllacy-link user-basket-link" href="">Оформить заказ</a>
 		<div class="contact">
 			<p>С 10 до 20, ежедневно</p>
 			<p class="contact-tel">8 812 450-25-25</p>
@@ -99,208 +90,198 @@
 			</ul>
 		</div>
 		<div class="sorting">
-			<h2>Сливочное мороженое</h2>
-			<div class="sorting-main">
-				<p>Сортировка</p>
-				<select name="sorting">
-					<option value="sorting-popular">По популярности</option>
-					<option value="sorting-cheap">Сначала недорогие</option>
-					<option value="sorting-expensive">Сначала дорогие</option>
-					<option value="sorting-fat">По жирности</option>
-				</select>
-			</div>
-			<div class="sorting-price"><p>Цена: 100 руб. - 500 руб.</p>
-				<form action="#" method="post">
-					<input type="range" min="100" max="500">
-				</form>
-			</div>
-			<div class="sorting-fat">
-				<p>Жирность</p>
-				<form action="#" method="post">
-				<p>
-					<label>
-						<input type="radio" name="sorting-fat-item" value="zero">0%
-					</label>
-				</p>
-				<p>
-					<label>
-						<input type="radio" name="sorting-fat-item" value="zero" checked>До 10%
-					</label>
-				</p>
-				<p>
-					<label>
-						<input type="radio" name="sorting-fat-item" value="zero">До 30%
-					</label>
-				</p>
-				<p>
-					<label>
-						<input type="radio" name="sorting-fat-item" value="zero">Выше 30%
-					</label>
-				</p>
-				</form>
-			</div>
-			<div class="sorting-varieties">
-				<p>Наполнители</p>
-				<form action="#" method="post">
-				<p>
-					<label>
-						<input type="checkbox" name="shoko" checked>Шоколадные
-					</label>
-				</p>
-				<p>
-					<label>
-						<input type="checkbox" name="sugar" checked>Сахарные присыпки
-					</label>
-				</p>
-				<p>
-					<label>
-						<input type="checkbox" name="fruit">Фрукты
-					</label>
+			<h1>Сливочное мороженое</h1>
+			<form action="#" method="post">
+					<fieldset class="sorting-main">
+						<legend>Сортировка</legend>
+						<select name="sorting">
+							<option value="sorting-popular">По популярности</option>
+							<option value="sorting-cheap">Сначала недорогие</option>
+							<option value="sorting-expensive">Сначала дорогие</option>
+							<option value="sorting-fat">По жирности</option>
+						</select>
+					</fieldset>
+			</form>
+			<form action="#" method="post">
+					<fieldset class="sorting-price">
+						<legend>Цена: 100 руб. - 500 руб.</legend>
+						<input type="range" min="100" max="500">
+					</fieldset>
+			</form>
+			<form action="#" method="post">
+					<fieldset class="sorting-fat">
+						<legend>Жирность</legend>
+						<p>
+							<label>
+								<input type="radio" name="sorting-fat-item" value="zero">0%
+							</label>
+						</p>
+						<p>
+							<label>
+								<input type="radio" name="sorting-fat-item" value="zero" checked>До 10%
+							</label>
+						</p>
+						<p>
+							<label>
+								<input type="radio" name="sorting-fat-item" value="zero">До 30%
+							</label>
+						</p>
+						<p>
+							<label>
+								<input type="radio" name="sorting-fat-item" value="zero">Выше 30%
+							</label>
+						</p>
+					</fieldset>
+			</form>
+			<form action="#" method="post">
+				<fieldset class="sorting-varieties">
+					<legend>Наполнители</legend>
+					<p>
+						<label>
+							<input type="checkbox" name="shoko" checked>Шоколадные
+						</label>
 					</p>
-				<p>
-					<label>
-						<input type="checkbox" name="syrup">Сиропы
-					</label>
-				</p>
-				<p>
-					<label>
-						<input type="checkbox" name="jam">Джемы
-					</label>
+					<p>
+						<label>
+							<input type="checkbox" name="sugar" checked>Сахарные присыпки
+						</label>
 					</p>
-				</form>
-				<button class="sorting-varieties-button" type="button">Применить</button>
-			</div>
-		</div>
+					<p>
+						<label>
+							<input type="checkbox" name="fruit">Фрукты
+						</label>
+					</p>
+					<p>
+						<label>
+							<input type="checkbox" name="syrup">Сиропы
+						</label>
+					</p>
+					<p>
+						<label>
+							<input type="checkbox" name="jam">Джемы
+						</label>
+					</p>
+					<button class="sorting-varieties-button" type="button">Применить</button>
+				</fieldset>
+			</form>
 		<div class="catalog">
-			<div class="catalog-item-1">
+			<div class="catalog-item">
 				<img class="catalog-img" src="img/catalog-item-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-				<p>310 <span class="rub"></span>/кг
+				<p>310 <span class="rub">Р</span>/кг
 				</p>
 				<a class="catalog-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-					<div class="catalog-item1-fast">
+					<div class="catalog-item-fast">
 						<span class="catalog-link-fast">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
-						<button class="gllacy-btn catalog-btn" type="button">Быстрый просмотр
-						</button>
+						<a class="gllacy-link catalog-link" href="">Быстрый просмотр</a>
 					</div>
 			</div>
-			<div class="catalog-item-2">
+			<div class="catalog-item">
 				<img class="catalog-img" src="img/catalog-item-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-				<p>380 <span class="rub"></span>/кг
+				<p>380 <span class="rub">Р</span>/кг
 				</p>
 				<a class="catalog-link" href="#">Сливочно-кофейное с кусочками шоколада</a>
-				<div class="catalog-item1-fast">
+				<div class="catalog-item-fast">
 					<span class="catalog-link-fast">Сливочно-кофейное с кусочками шоколада</span>
-					<button class="gllacy-btn catalog-btn" type="button">Быстрый просмотр
-					</button>
+					<a class="gllacy-link catalog-link" href="">Быстрый просмотр</a>
 				</div>
 			</div>
-			<div class="catalog-item-3">
+			<div class="catalog-item">
 				<img class="catalog-img" src="img/catalog-item-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-				<p>355 <span class="rub"></span>/кг
+				<p>355 <span class="rub">Р</span>/кг
 				</p>
 				<a class="catalog-link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-				<div class="catalog-item1-fast">
+				<div class="catalog-item-fast">
 					<span class="catalog-link-fast">Сливочно-клубничное с присыпкой из белого шоколада</span>
-					<button class="gllacy-btn catalog-btn" type="button">Быстрый просмотр
-					</button>
+					<a class="gllacy-link catalog-link" href="">Быстрый просмотр</a>
 				</div>
 			</div>
-			<div class="catalog-item-4">
+			<div class="catalog-item">
 				<img class="catalog-img" src="img/catalog-item-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-				<p>415 <span class="rub"></span>/кг
+				<p>415 <span class="rub">Р</span>/кг
 				</p>
 				<a class="catalog-link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
-				<div class="catalog-item1-fast">
+				<div class="catalog-item-fast">
 					<span class="catalog-link-fast">Сливочное крем-брюле с карамельной подливкой</span>
-					<button class="gllacy-btn catalog-btn" type="button">Быстрый просмотр
-					</button>
+					<a class="gllacy-link catalog-link" href="">Быстрый просмотр</a>
 				</div>
 			</div>
-			<div class="catalog-item-5">
+			<div class="catalog-item">
 				<img class="catalog-img" src="img/catalog-item-5.png" width="267" height="267" alt="Сливочное с брусничным джемом">
-				<p>325 <span class="rub"></span>/кг
+				<p>325 <span class="rub">Р</span>/кг
 				</p>
 				<a class="catalog-link" href="#">Сливочное с брусничным джемом</a>
-				<div class="catalog-item1-fast">
+				<div class="catalog-item-fast">
 					<span class="catalog-link-fast">Сливочное с брусничным джемом</span>
-					<button class="gllacy-btn catalog-btn" type="button">Быстрый просмотр
-					</button>
+					<a class="gllacy-link catalog-link" href="">Быстрый просмотр</a>
 				</div>
 			</div>
-			<div class="catalog-item-6">
+			<div class="catalog-item">
 				<img class="catalog-img" src="img/catalog-item-6.png" width="267" height="267" alt="Сливочное-черничное с цельными ягодами черники">
-				<p>410 <span class="rub"></span>/кг
+				<p>410 <span class="rub">Р</span>/кг
 				</p>
 				<a class="catalog-link" href="#">Сливочное-черничное с цельными ягодами черники</a>
-				<div class="catalog-item1-fast">
+				<div class="catalog-item-fast">
 					<span class="catalog-link-fast">Сливочное-черничное с цельными ягодами черники</span>
-					<button class="gllacy-btn catalog-btn" type="button">Быстрый просмотр
-					</button>
+					<a class="gllacy-link catalog-link" href="">Быстрый просмотр</a>
 				</div>
 			</div>
-			<div class="catalog-item-7">
+			<div class="catalog-item">
 				<img class="catalog-img" src="img/catalog-item-7.png" width="267" height="267" alt="Сливочное-лимонное с карамельное присыпкой">
-				<p>375 <span class="rub"></span>/кг
+				<p>375 <span class="rub">Р</span>/кг
 				</p>
 				<a class="catalog-link">Сливочное-лимонное с карамельное присыпкой</a>
-				<div class="catalog-item1-fast">
+				<div class="catalog-item-fast">
 					<span class="catalog-link-fast">Сливочное-лимонное с карамельное присыпкой</span>
-					<button class="gllacy-btn catalog-btn" type="button">Быстрый просмотр
-					</button>
+					<a class="gllacy-link catalog-link" href="">Быстрый просмотр</a>
 				</div>
 			</div>
-			<div class="catalog-item-8">
+			<div class="catalog-item">
 				<img class="catalog-img" src="img/catalog-item-8.png" width="267" height="267" alt="Сливочное с шоколадной стружкой">
-				<p>320 <span class="rub"></span>/кг</p>
+				<p>320 <span class="rub">Р</span>/кг</p>
 				<a class="catalog-link" href="#">Сливочное с шоколадной стружкой</a>
-				<div class="catalog-item1-fast">
+				<div class="catalog-item-fast">
 					<span class="catalog-link-fast">Сливочное с шоколадной стружкой</span>
-					<button class="gllacy-btn catalog-btn" type="button">Быстрый просмотр
-					</button>
+					<a class="gllacy-link catalog-link" href="">Быстрый просмотр</a>
 				</div>
 			</div>
-			<div class="catalog-item-9">
+			<div class="catalog-item">
 				<img class="catalog-img" src="img/catalog-item-9.png" width="267" height="267" alt="Сливочное-ванильное с кусочками шоколада">
-				<p>440 <span class="rub"></span>/кг
+				<p>440 <span class="rub">Р</span>/кг
 				</p>
 				<a class="catalog-link" href="#">Сливочное-ванильное с кусочками шоколада</a>
-				<div class="catalog-item1-fast">
+				<div class="catalog-item-fast">
 					<span class="catalog-link-fast">Сливочное-ванильное с кусочками шоколада</span>
-					<button class="gllacy-btn catalog-btn" type="button">Быстрый просмотр
-					</button>
+					<a class="gllacy-link catalog-link" href="">Быстрый просмотр</a>
 				</div>
 			</div>
-			<div class="catalog-item-10">
+			<div class="catalog-item">
 				<img class="catalog-img" src="img/catalog-item-10.png" width="267" height="267" alt="Сливочное с ментоловым сиропом">
-				<p>435 <span class="rub"></span>/кг
+				<p>435 <span class="rub">Р</span>/кг
 				</p>
 				<a class="catalog-link" href="#">Сливочное с ментоловым сиропом</a>
-				<div class="catalog-item1-fast">
+				<div class="catalog-item-fast">
 					<span class="catalog-link-fast">Сливочное с ментоловым сиропом</span>
-					<button class="gllacy-btn catalog-btn" type="button">Быстрый просмотр
-					</button>
+					<a class="gllacy-link catalog-link" href="">Быстрый просмотр</a>
 				</div>
 			</div>
-			<div class="catalog-item-11">
+			<div class="catalog-item">
 				<img class="catalog-img" src="img/catalog-item-11.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
-				<p>355 <span class="rub"></span>/кг
+				<p>355 <span class="rub">Р</span>/кг
 				</p>
 				<a class="catalog-link" href="#">Сливочное с кусочками черного шоколада</a>
-				<div class="catalog-item1-fast">
+				<div class="catalog-item-fast">
 					<span class="catalog-link-fast">Сливочное с кусочками черного шоколада</span>
-					<button class="gllacy-btn catalog-btn" type="button">Быстрый просмотр
-					</button>
+					<a class="gllacy-link catalog-link" href="">Быстрый просмотр</a>
 				</div>
 			</div>
-			<div class="catalog-item-12">
+			<div class="catalog-item">
 				<img class="catalog-img" src="img/catalog-item-12.png" width="267" height="267" alt="Сливочное с мятным сиропом">
-				<p>420 <span class="rub"></span>/кг
+				<p>420 <span class="rub">Р</span>/кг
 				</p>
 				<a class="catalog-link" href="#">Сливочное с мятным сиропом</a>
-				<div class="catalog-item1-fast">
+				<div class="catalog-item-fast">
 					<span class="catalog-link-fast">Сливочное с мятным сиропом</span>
-					<button class="gllacy-btn catalog-btn" type="button">Быстрый просмотр
-					</button>
+					<a class="gllacy-link catalog-link" href="">Быстрый просмотр</a>
 				</div>
 			</div>
 			<div>
